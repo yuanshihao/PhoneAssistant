@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog" >
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="防盗密码"
+            android:textColor="#cc000000"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.4dp"
+            android:background="#45000000" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/et_9path_selector"
+            android:hint="输入密码"
+            android:textColorHint="#77000000"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_confirmPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/et_9path_selector"
+            android:hint="确认密码"
+            android:textColorHint="#77000000"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.4dp"
+            android:background="#45000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_cancel_dialog_shape_selector"
+                android:text="取消"
+                android:textColor="#cc000000"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:background="#45000000" />
+
+            <Button
+                android:id="@+id/bt_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_confirm_dialog_shape_selector"
+                android:text="确认"
+                android:textColor="#cc000000"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFFFFFF" >
+
+    <LinearLayout
+        android:elevation="4dp"
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#109d59"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.5dp"
+            android:drawableLeft="@drawable/title_bar_back"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手机防盗"
+            android:textColor="#ffffff"
+            android:textSize="19.5sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title"
+        android:layout_marginBottom="59dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="指令"
+                android:textColor="#60000000"
+                android:textSize="14.9sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_item"
+                android:orientation="vertical"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/locate"
+                    android:drawablePadding="14dp"
+                    android:paddingTop="25dp"
+                    android:text="手机定位:    dingwei*#"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/lock"
+                    android:drawablePadding="14dp"
+                    android:paddingTop="27dp"
+                    android:text="冻结屏幕:    dongjie*#"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_wipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/wipe"
+                    android:drawablePadding="14dp"
+                    android:drawableStart="@drawable/wipe"
+                    android:paddingTop="27dp"
+                    android:text="销毁数据:    xiaohui*#"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/alert"
+                    android:drawablePadding="14dp"
+                    android:paddingBottom="29dp"
+                    android:paddingTop="27dp"
+                    android:text="响警报音:    jingbao*#"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="绑定安全号码"
+                    android:textColor="#60000000"
+                    android:textSize="14.9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_item"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="23dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="10dp"
+                android:paddingStart="13dp"
+                android:paddingTop="20dp"
+                android:visibility="visible" >
+
+                <EditText
+                    android:id="@+id/et_safeNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_9path_selector"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/phone"
+                    android:hint="输入安全号码"
+                    android:inputType="phone"
+                    android:maxLength="16"
+                    android:singleLine="true"
+                    android:textColorHint="#77000000" />
+
+                <ImageButton
+                    android:id="@+id/bt_selectContants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="@drawable/small_shape_selector"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/contacts" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bindInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_item"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_bindInfoza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_vertical"
+                    android:text="手机防盗已开启"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_bindInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:textColor="#cc000000"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:drawableLeft="@drawable/small_info"
+                        android:visibility="visible" >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="3dp"
+                        android:text="sim"
+                        android:textColor="#50000000"
+                        android:textSize="13.5sp"
+                        android:visibility="visible" >
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="卡变更自动通知"
+                        android:textColor="#60000000"
+                        android:textSize="11sp"
+                        android:visibility="visible" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_setPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_shape_selector"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="修改防盗密码"
+                    android:textColor="#99000000"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:background="#45000000"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        
+        <TextView
+            android:id="@+id/bt_startBind"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btn_shape_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="开启保护"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

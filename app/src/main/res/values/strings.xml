@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">手机助手</string>
+    <string name="device_admin_description">设备管理器</string>
+    <string name="device_admin">设备管理器</string>
+    <string name="contants">联系人</string>
+</resources>
