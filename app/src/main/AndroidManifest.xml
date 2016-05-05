@@ -47,7 +47,7 @@
         <activity
             android:name="com.ysh.phoneassistant.activity.AntitheftActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
         <receiver
             android:name="com.ysh.phoneassistant.receiver.mAdminReceiver"

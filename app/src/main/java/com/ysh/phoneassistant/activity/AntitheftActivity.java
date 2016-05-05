@@ -1,6 +1,5 @@
 package com.ysh.phoneassistant.activity;
 
-import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -8,6 +7,8 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,7 +28,7 @@ import com.ysh.phoneassistant.ui.AlertOpenAdminDialog;
 import com.ysh.phoneassistant.ui.SetPwdDialog;
 import com.ysh.phoneassistant.utils.MD5Utils;
 
-public class AntitheftActivity extends Activity {
+public class AntitheftActivity extends AppCompatActivity {
 
 	private TextView bt_startBind;
 	private EditText et_safeNumber;
@@ -62,6 +63,18 @@ public class AntitheftActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_antitheft);
 
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+		setTitle("手机防盗");
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+		toolbar.setNavigationOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				back();
+			}
+		});
+
 		ll_edit = (LinearLayout) findViewById(R.id.ll_edit);
 		vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 		tv_bindInfo = (TextView) findViewById(R.id.tv_bindInfo);
@@ -69,7 +82,6 @@ public class AntitheftActivity extends Activity {
 		bt_startBind = (TextView) findViewById(R.id.bt_startBind);
 		et_safeNumber = (EditText) findViewById(R.id.et_safeNumber);
 		bt_selectContacts = (ImageButton) findViewById(R.id.bt_selectContants);
-		tv_back = (TextView) findViewById(R.id.tv_back);
 		tv_setPwd = (TextView) findViewById(R.id.tv_setPwd);
 
 		et_safeNumber.setFocusableInTouchMode(false);
@@ -95,14 +107,6 @@ public class AntitheftActivity extends Activity {
 				vibrator.vibrate(30);
 				Intent intent = new Intent(AntitheftActivity.this, ContantsList.class);
 				startActivityForResult(intent, 0);
-			}
-		});
-
-		tv_back.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				back();
 			}
 		});
 
