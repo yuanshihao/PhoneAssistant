@@ -90,7 +90,7 @@ public class CheckSimInfoService extends Service {
 	
 	public void sendSms() {
 		SmsManager sm = SmsManager.getDefault();
-		String msg = "来自安卓手机卫士: 您的sim卡变更了";
+		String msg = "来自手机助手: 您的sim卡变更了";
 		sm.sendTextMessage(safeNumber, null, msg, null, null);
 	}
 
