@@ -4,5 +4,5 @@
 
 ###Feature
 
-* By binding mobile phone number, to achieve a remote location, delete data, lock screen, alarm and other functions.
+* By binding mobile phone number, to get a remote location, delete data, lock screen, alarm and other functions.
 * Show the mobile phone system information.
